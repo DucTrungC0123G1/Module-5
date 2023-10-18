@@ -39,8 +39,8 @@ let person = {
 // let student = {...person}
 // console.log('FirstName: '+ student.firstName, 'Gender: ' + student.gender, 'Degree: ' + student.education.degree, 'Language: '+ student.language[0])
 
-let {firstName, gender, education: {degree}} = person;
-let student = {firstName, gender, education: degree, language: "English"};
+let {firstName, gender, education: {degree}, language: [language1]} = person;
+let student = {firstName, gender, education: degree, language1};
 console.log(student);
 
 
