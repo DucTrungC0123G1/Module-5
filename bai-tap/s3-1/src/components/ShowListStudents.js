@@ -25,7 +25,7 @@ class Student extends Component {
                         <th>Address</th>
                     </tr>
                     {this.state.studentList.map(student => (
-                            <tr>
+                            <tr key={student.id}>
                                 <td>{student.id}</td>
                                 <td>{student.name}</td>
                                 <td>{student.age}</td>
