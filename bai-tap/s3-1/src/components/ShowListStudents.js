@@ -10,7 +10,6 @@ class Student extends Component {
                 {id: '3', name: 'Hải', age: '12', address: 'Đồng Nai'},
                 {id: '4', name: 'Thủy', age: '13', address: 'Quảng Nam'},
             ]
-
         }
     }
 

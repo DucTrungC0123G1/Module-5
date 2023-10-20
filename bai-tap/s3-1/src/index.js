@@ -4,13 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Student from "./components/ShowListStudents";
-import TodoApp from "./components/TodoApp";
+import TodoApp from "../../s3-2/src/components/TodoApp";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <div><Student/>
-        <TodoApp/></div>
-
+    <div>
+        <Student/>
+    </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
