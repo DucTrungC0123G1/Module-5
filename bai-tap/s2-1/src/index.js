@@ -47,11 +47,14 @@ root.render(
     <div className="container">
         <h1>Students</h1>
         <table>
+            <thead>
             <tr>
                 <th>Company</th>
                 <th>Contact</th>
                 <th>Country</th>
             </tr>
+            </thead>
+            <tbody>
             {students.map(student => (
                 <tr key={student.id}>
                     <td>{student.company}</td>
@@ -59,6 +62,7 @@ root.render(
                     <td>{student.country}</td>
                 </tr>
             ))}
+            </tbody>
         </table>
     </div>
 );

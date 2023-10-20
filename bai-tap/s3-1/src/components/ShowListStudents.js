@@ -18,12 +18,15 @@ class Student extends Component {
         return (
             <div>
                 <table border={1}>
+                    <thead>
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
                         <th>Age</th>
                         <th>Address</th>
                     </tr>
+                    </thead>
+                    <tbody>
                     {this.state.studentList.map(student => (
                             <tr key={student.id}>
                                 <td>{student.id}</td>
@@ -33,7 +36,7 @@ class Student extends Component {
                             </tr>
                         )
                     )}
-
+                    </tbody>
                 </table>
             </div>
         )
