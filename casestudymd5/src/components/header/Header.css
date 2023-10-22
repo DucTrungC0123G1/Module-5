@@ -1,0 +1,13 @@
+nav {
+    margin-top: 2rem;
+    background: transparent;
+    background-color: #046056;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: rgb(22, 31, 39);
+}
