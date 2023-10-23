@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel='stylesheet' type='text/css'
+          href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css'>
+</head>
+<body>
+<div class="container">
+    <h1><b>Tờ Khai Y Tế</b></h1>
+    <form>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">Họ và Tên</label>
+            <input type="text" id="name" name="name" class="form-control mb-3">
+        </div>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">CCCD/CMND</label>
+            <input type="text" id="cmnd" name="cmnd" class="form-control mb-3">
+        </div>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">Năm Sinh</label>
+            <input type="text" name="yearBorn" class="form-control mb-3">
+        </div>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">Giới Tính</label>
+            <input type="radio" value="1" name="gender">Nam
+            <input type="radio" value="2" name="gender">Nữ
+        </div>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">Quốc Tịch</label>
+            <input type="text" name="nationality" class="form-control mb-3">
+        </div>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">Bộ Phận Làm Việc</label>
+            <input type="text" name="position" class="form-control mb-3">
+        </div>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">Có Thẻ Bảo Hiểm Y Tế</label>
+            <input type="checkbox" name="insuranceCard" class="form-group mb-3">
+        </div>
+        <div>
+            <h1><b>Địa Chỉ Liên Lạc Tại Việt Nam</b></h1>
+        </div>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">Tỉnh /Thành</label>
+            <input type="text" name="city" class="form-control mb-3">
+        </div>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">Quận/ Huyện</label>
+            <input type="text" name="district" class="form-control mb-3">
+        </div>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">Phường/ Xã</label>
+            <input type="text" name="ward" class="form-control mb-3">
+        </div>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">Số Nhà</label>
+            <input type="text" name="homeNumber" class="form-control mb-3">
+        </div>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">Điện Thoại</label>
+            <input type="text" name="phone" class="form-control mb-3">
+        </div>
+        <div class="col-sm-3 my-1">
+            <label class="form-group mb-3">Email</label>
+            <input type="text" name="email" class="form-control mb-3">
+        </div>
+        <div>
+            <h4><b>Trong vòng 14 ngày qua, Anh/Chị có đến quốc gia/ vùng lãnh thổ nào(Có thể đi nhiều quốc gia)</b></h4>
+        </div>
+        <div class="col-sm-3 my-1">
+            <textarea name="goWhere" class="form-control"></textarea>
+        </div>
+        <div>
+            <h4><b>Trong 14 ngày qua Anh/Chị có thấy xuất hiện dấu hiệu nào sau đây không?</b></h4>
+        </div>
+        <div class="col-sm-3 my-1">
+            <input type="checkbox" name="sick" value="sốt" class="form-group mb-3">Sốt
+        </div>
+        <div class="col-sm-3 my-1">
+            <input type="checkbox" name="sick" value="ho" class="form-group mb-3">Ho
+        </div>
+        <div class="col-sm-3 my-1">
+            <input type="checkbox" name="sick" value="khó thở" class="form-group mb-3">Khó Thở
+        </div>
+
+        <div class="col-sm-3 my-1">
+            <input type="checkbox" name="sick" value="viêm phổi" class="form-group mb-3">Viêm Phổi
+        </div>
+        <div class="col-sm-3 my-1">
+            <input type="checkbox" name="sick" value="đau họng" class="form-group mb-3">Đau Họng
+        </div>
+        <div class="col-sm-3 my-1">
+            <input type="checkbox" name="sick" value="mệt mỏi" class="form-group mb-3">Mệt Mỏi
+        </div>
+        <div>
+            <h4><b>Trong vòng 14 ngày Anh/ Chị có tiếp xúc với ?</b></h4>
+        </div>
+        <div class="col-sm-3 my-1">
+            <input type="checkbox" name="meet" value="7" class="form-group mb-3">Người bệnh hoặc nghi ngờ, mắc bện COVID
+        </div>
+        <div class="col-sm-3 my-1">
+            <input type="checkbox" name="meet" value="8" class="form-group mb-3">Người từ nước có bệnh COVID
+        </div>
+        <div class="col-sm-3 my-1">
+            <input type="checkbox" name="meet" value="9" class="form-group mb-3">Người có biểu hiện(Sốt,ho, khó thở,viêm phổi)
+        </div>
+        <div class="col-sm-3 my-1">
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+<script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js'
+        integrity='sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3'
+        crossorigin='anonymous'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js'
+        integrity='sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i'
+        crossorigin='anonymous'></script>
+</html>
