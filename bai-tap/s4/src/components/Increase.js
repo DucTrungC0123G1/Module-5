@@ -1,22 +1,10 @@
 import React, {useState} from "react";
 
-function Increase() {
-    const [countFirst, setCountFirst] = useState(0);
-    const [countSecond, setCountSecond] = useState(0);
-    const handleIncrease = () => {
-        setCountFirst(countFirst + 1);
+const Increase = (props) => {
+    const [count, setCount] = useState(props);
+    const handleIncrease = changeCount => {
+        setCount(prevState => prevState + props);
     }
-    const handleIncrease2 = () => {
-        setCountSecond(countSecond + 2);
-    }
-    return (
-        <>
-            <h3>Count : {countFirst}</h3>
-            <button onClick={handleIncrease}>Increase</button>
-            <h3>Count 2: {countSecond}</h3>
-            <button onClick={handleIncrease2}>Increase 2</button>
-        </>
-    )
+    return [count, handleIncrease]
 }
-
 export default Increase;
