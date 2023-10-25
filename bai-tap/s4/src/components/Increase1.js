@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import Increase from "./Increase";
+import useIncrease from "./Increase";
 export const Increase1 =() =>{
-    const [count,setCount] = Increase(1);
+    const [count,setCount] = useIncrease;
     const handleIncrease =()=>{
         setCount(1);
     }
