@@ -1,0 +1,55 @@
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { DELETE_USERS, GET_ALL_USERS } from "../redux/Type";
+
+
+function UserList() {
+    const users = useSelector(state => state.users);
+    const dispatch = useDispatch();
+
+    console.log(users);
+    useEffect(() => {
+        dispatch({ type: GET_ALL_USERS, payload: {} });
+    }, [dispatch])
+
+    if (!users) {
+        return null;
+    }
+
+    const removeUser = (id) => {
+        dispatch({
+            type: DELETE_USERS,
+            payload: id
+        })
+
+    }
+
+
+    return (
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Website</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                {users.map(user => (
+                    <tr key={user.id}>
+                        <td>{user.id}</td>
+                        <td>{user.username}</td>
+                        <td>{user.email}</td>
+                        <td>{user.website}</td>
+                        <td><button type="button" onClick={() => removeUser(`${user.id}`)}>Delete</button></td>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
+        </div>
+    );
+}
+export default UserList;
