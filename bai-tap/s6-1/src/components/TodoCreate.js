@@ -3,6 +3,7 @@ import {ErrorMessage, Field, Form, Formik} from "formik";
 import {useNavigate} from "react-router";
 import *as Yup from "yup";
 import {addTodo} from "../service/TodoService";
+import {toast} from "react-toastify";
 
 export function TodoCreate() {
     const navigate = useNavigate();
@@ -10,11 +11,12 @@ export function TodoCreate() {
 
     }, [])
     const callCreate = async (todo) => {
-     const res = await addTodo(todo)
-        if (res.status===201){
+        const res = await addTodo(todo)
+        if (res.status === 201) {
             navigate("/")
-        }else {
-            alert("error")
+            toast.success("Thêm Thành Công")
+        } else {
+            toast.error("error")
         }
     }
 

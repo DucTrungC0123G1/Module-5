@@ -1,31 +1,43 @@
-import React, {useEffect} from 'react';
-import {Field, Form, Formik} from "formik";
-import {add} from "../service/bookService";
-import {useNavigate} from "react-router-dom";
+import {editBook, findById} from "../service/bookService";
+import React, {useEffect, useState} from "react";
+import {useNavigate, useParams} from "react-router";
 import {toast} from "react-toastify";
-export function BookAdd(props) {
-    const navigate = useNavigate();
+import {Field, Form, Formik} from "formik";
+
+export function BookEdit() {
+    const {id} = useParams();
+    const navigate = useNavigate()
+    const [book,setBook] =useState(null)
+
     useEffect(()=>{
-    },[]);
-    const addBook = async (data)=>{
-        const rs = await add(data);
-        console.log()
-        if(rs.status === 201){
-            navigate("/");
-            toast.success("Thêm mới thành công")
+        findBookById()
+    },[id])
+
+    const findBookById =async ()=>{
+        const rs = await findById(id)
+        setBook(rs)
+    }
+
+    const updateBook = async (data)=>{
+        const rs = await editBook(data)
+        if (rs.status===200){
+            navigate("/")
+            toast("edit success")
         }else {
-            alert("Them moi that bai")
+            toast("edit error")
         }
     }
 
-    return (
+    if (!book){
+        return null;
+    }
+    return(
         <>
-            <h1>Add Book</h1>
+            <h1>Edit Book</h1>
             <Formik initialValues={{
-                title: '',
-                quantity: ''
+               ...book
             }} onSubmit={(value)=>{
-                addBook(value)
+                updateBook(value)
             }}>
 
                 <div className="container px-5 my-5">
@@ -47,7 +59,6 @@ export function BookAdd(props) {
 
             </Formik>
         </>
-    );
-}
+    )
 
-export default BookAdd;
+}

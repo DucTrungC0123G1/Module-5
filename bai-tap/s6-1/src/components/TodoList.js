@@ -7,6 +7,7 @@ export function TodoList() {
     const [todos, setTodos] = useState([]);
     useEffect(() => {
         getAllTodoList();
+        console.log(todos)
     }, [])
     const getAllTodoList = async () => {
         const result = await TodoService.getAll();
@@ -16,7 +17,7 @@ export function TodoList() {
 
     return (
         <div>
-            <Link  to="/add">
+            <Link to="/add">
                 create
             </Link>
             <h1>TodoList</h1>
@@ -33,7 +34,7 @@ export function TodoList() {
                         <tr key={todo.id}>
                             <td>{todo.userId}</td>
                             <td>{todo.title}</td>
-                            <td>{todo.completed ? "Yes": "No"}</td>
+                            <td>{todo.completed ? "Yes" : "No"}</td>
                         </tr>
                     ))
                 }
