@@ -8,10 +8,8 @@ export function CustomerDelete(props) {
         const rs = await deleteCustomer(customer.id);
         if (rs.status === 200) {
             closeModal();
-            toast("ok")
+            toast("Delete Success")
         }
-
-
     }
 
     return (
@@ -26,7 +24,7 @@ export function CustomerDelete(props) {
                                         aria-label="Close" onClick={closeModal}></button>
                             </div>
                             <div className="modal-body">
-                                <p>Do you want to delete {selectedCustomer.name}</p>
+                                <p>Do you want to delete: <b> {selectedCustomer.name}</b></p>
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"

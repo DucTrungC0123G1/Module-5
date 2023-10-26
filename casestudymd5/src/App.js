@@ -10,6 +10,7 @@ import CustomerList from "./components/customers/CustomerList";
 import {ToastContainer} from "react-toastify";
 import CustomerCreate from "./components/customers/CustomerCreate";
 import {CustomerEdit} from "./components/customers/CustomerEdit";
+import {ContractList} from "./components/contract/ContractList";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/customers" element={<CustomerList></CustomerList>}></Route>
               <Route path="customers/create" element={<CustomerCreate></CustomerCreate>}/>
               <Route path="/customers/edit/:id" element={<CustomerEdit></CustomerEdit>}/>
+              <Route path="/contracts" element={<ContractList/>}/>
           </Routes>
           <ToastContainer/>
           <Footer></Footer>

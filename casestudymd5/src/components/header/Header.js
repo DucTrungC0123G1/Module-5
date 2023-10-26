@@ -80,6 +80,7 @@ const Header = () => (
             {/* Navbar Start */}
             <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
                 <a href="index.html" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                    <img style={{height:'50px',width:'50px'}} src="https://furamavietnam.com/wp-content/uploads/2018/10/logo.png" alt="Img"/>
                     <h1 className="m-0">Furama</h1>
                 </a>
                 {/*<button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">*/}
@@ -137,11 +138,7 @@ const Header = () => (
                 <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img
-                                className="height-panner w-100"
-                                src="https://static-images.vnncdn.net/files/publish/2023/6/23/tan-huong-ky-nghi-dang-cap-mien-di-san-voi-bo-doi-tu-new-world-hotels-resorts-664.jpg"
-                                alt="Image"
-                            />
+                            <img style={{width:'100%',height:'500px'}} className="height-panner w-100" src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg" alt="Image"/>
                             <div className="height-panner carousel-caption">
                                 <div className="container">
                                     <div className="row justify-content-center">
@@ -155,11 +152,7 @@ const Header = () => (
                             </div>
                         </div>
                         <div className="carousel-item">
-                            <img
-                                className="height-panner w-100"
-                                src="https://toquoc.mediacdn.vn/280518851207290880/2023/4/28/screenshot3-1682666317502330816495.png"
-                                alt="Image"
-                            />
+                            <img style={{width:'100%',height:'500px'}} className="height-panner w-100" src="https://tuildonai.com/vnt_upload/project/05_2019/FURAMA.jpg" alt="Image"/>
                             <div className="height-panner carousel-caption">
                                 <div className="container">
                                     <div className="row justify-content-center">
