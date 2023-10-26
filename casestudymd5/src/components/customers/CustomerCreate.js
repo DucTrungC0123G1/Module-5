@@ -66,7 +66,7 @@ export function CustomerCreate() {
     }
     return (
         <>
-            <h1>Add Customer</h1>
+            <h1 className="title">Add Customer</h1>
             <Formik initialValues={initValue}
                     validationSchema={Yup.object(validateObject)}
                     onSubmit={(values) => {

@@ -26,8 +26,9 @@ export function CustomerEdit() {
         setCustomer(rs)
     }
     const updateCustomer = async (data) => {
-        // const rsp = {...data,customerType:JSON.parse(data.customerType)}
-        const rs = await editCustomer(data)
+        const rsp = {...data,customerType:JSON.parse(data.customerType), id: id}
+        const rs = await editCustomer(rsp)
+        console.log(rs)
         if (rs.status === 200) {
             console.log(rs)
             navigate("/customers")
@@ -47,35 +48,35 @@ export function CustomerEdit() {
         identity: customer?.identity,
         phone: customer?.phone,
         email: customer?.email,
-        customerType: customer?.customerType,
+        customerType: JSON.stringify(customer?.customerType),
         location: customer?.location
     }
-    // const validateObject = {
-    //     name: Yup.string()
-    //         .required("name can not empty")
-    //         .matches(/^(?:[A-Z][a-z]*\s?)+$/, "Customer names cannot contain numbers. And the first letters of each word must be capitalized."),
-    //     dob: Yup.string()
-    //         .required("dob can not empty"),
-    //     gender: Yup.string()
-    //         .required("gender can not empty"),
-    //     identity: Yup.string()
-    //         .required("identity can not empty")
-    //         .matches(/^[0-9]{9}$|^[0-9]{12}$/, "identity must be correct the format"),
-    //     phone: Yup.string()
-    //         .required("phone can not empty"),
-    //     email: Yup.string()
-    //         .required("email can not empty")
-    //         .matches(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "email must be correct the format"),
-    //     customerType: Yup.string()
-    //         .required("type can not empty"),
-    //     location: Yup.string()
-    //         .required("location can not empty")
-    // }
+    const validateObject = {
+        name: Yup.string()
+            .required("name can not empty")
+            .matches(/^(?:[A-Z][a-z]*\s?)+$/, "Customer names cannot contain numbers. And the first letters of each word must be capitalized."),
+        dob: Yup.string()
+            .required("dob can not empty"),
+        gender: Yup.string()
+            .required("gender can not empty"),
+        identity: Yup.string()
+            .required("identity can not empty")
+            .matches(/^[0-9]{9}$|^[0-9]{12}$/, "identity must be correct the format"),
+        phone: Yup.string()
+            .required("phone can not empty"),
+        email: Yup.string()
+            .required("email can not empty")
+            .matches(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "email must be correct the format"),
+        customerType: Yup.string()
+            .required("type can not empty"),
+        location: Yup.string()
+            .required("location can not empty")
+    }
     return (
         <>
-            <h1>Edit Customer</h1>
+            <h1 className="title">Edit Customer</h1>
             <Formik initialValues={initValue}
-                    // validationSchema={Yup.object(validateObject)}
+                    validationSchema={Yup.object(validateObject)}
                     onSubmit={(values) => {
                         console.log("---------------------------------------------------")
                         console.log(values);

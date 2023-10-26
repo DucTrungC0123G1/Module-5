@@ -291,7 +291,6 @@
       "location": "Việt Nam"
     },
     {
-      "id": 5,
       "name": "Nguyễn Đức Trung",
       "dob": "2001-06-05",
       "gender": "Nam",
@@ -299,10 +298,11 @@
       "phone": "0338210411",
       "email": "TrungNguyen@gmail.com",
       "customerType": {
-        "id": 2,
-        "name": "Platinium"
+        "id": 3,
+        "name": "Gold"
       },
-      "location": "Việt Nam"
+      "location": "Việt Nam123",
+      "id": 5
     },
     {
       "name": "Nguyen Duc Trungrrrr",
@@ -329,7 +329,7 @@
         "id": 3,
         "name": "Gold"
       },
-      "location": "aaaa",
+      "location": "bbbbbbbbbbbb",
       "id": 13
     }
   ],

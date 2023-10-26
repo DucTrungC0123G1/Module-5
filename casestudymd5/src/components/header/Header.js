@@ -134,11 +134,7 @@ const Header = () => (
             {/* Navbar End */}
             {/* Carousel Start */}
             <div className=" container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
-                <div
-                    id="header-carousel"
-                    className="carousel slide"
-                    data-bs-ride="carousel"
-                >
+                <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
                             <img
