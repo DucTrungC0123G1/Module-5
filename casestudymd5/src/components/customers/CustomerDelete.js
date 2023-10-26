@@ -1,21 +1,21 @@
-import {removeBook} from "../service/bookService";
+import {deleteCustomer} from "../../service/customer_service";
 import {toast} from "react-toastify";
+import React from "react";
 
-export function BookDelete(props) {
-    const {isModalShow, selectedBook, closeModal} = props
-    //
-    // const {isModalShow,selectedBook}=props;
-    const handleDelete = async (book) => {
-        const rs = await removeBook(book.id);
+export function CustomerDelete(props) {
+    const {isModalShow, selectedCustomer, closeModal} = props
+    const handleDelete = async (customer) => {
+        const rs = await deleteCustomer(customer.id);
         if (rs.status === 200) {
             closeModal();
             toast("ok")
         }
+
+
     }
 
     return (
-        isModalShow &&
-        (
+        isModalShow && (
             <>
                 <div className="modal" tabIndex="-1" style={{display: 'block'}}>
                     <div className="modal-dialog">
@@ -26,22 +26,21 @@ export function BookDelete(props) {
                                         aria-label="Close" onClick={closeModal}></button>
                             </div>
                             <div className="modal-body">
-                                <p>Do you want to delete {selectedBook.title}</p>
+                                <p>Do you want to delete {selectedCustomer.name}</p>
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"
                                         onClick={closeModal}>Close
                                 </button>
-                                <button type="button" className="btn btn-primary"
-                                        onClick={() => handleDelete(selectedBook)}>Save changes
+                                <button type="button" className="btn btn-danger"
+                                        onClick={() => handleDelete(selectedCustomer)}>Save changes
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </>
-        )
-    )
+        ))
 }
 
-export default BookDelete;
+export default CustomerDelete;

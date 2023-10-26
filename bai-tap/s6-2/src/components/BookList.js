@@ -69,7 +69,7 @@ export function BookList() {
                 </BookDelete>
             </>
         )
-    );
+    )
 }
 
 export default BookList;
