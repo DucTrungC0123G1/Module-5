@@ -1,124 +1,68 @@
 {
-  "Contracts": [
-    {
-      "id": 1,
-      "code": 1,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
-      "depositMoney": 500000,
-      "totalMoney": 1000000
-    },
+  "contracts": [
     {
       "id": 2,
-      "code": 2,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
+      "code": "Contract-02",
+      "dateStart": "2023-05-15",
+      "dateEnd": "2023-06-15",
       "depositMoney": 500000,
       "totalMoney": 1000000
     },
     {
       "id": 3,
-      "code": 3,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
+      "code": "Contract-03",
+      "dateStart": "2023-12-23",
+      "dateEnd": "2023-12-30",
       "depositMoney": 500000,
       "totalMoney": 1000000
     },
     {
       "id": 4,
-      "code": 4,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
+      "code": "Contract-04",
+      "dateStart": "2023-01-25",
+      "dateEnd": "2023-05-15",
       "depositMoney": 500000,
       "totalMoney": 1000000
     },
     {
       "id": 5,
-      "code": 5,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
+      "code": "Contract-05",
+      "dateStart": "2023-10-15",
+      "dateEnd": "2023-11-15",
       "depositMoney": 500000,
       "totalMoney": 1000000
     },
     {
       "id": 6,
-      "code": 6,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
+      "code": "Contract-06",
+      "dateStart": "2023-04-15",
+      "dateEnd": "2023-06-15",
       "depositMoney": 500000,
       "totalMoney": 1000000
     },
     {
       "id": 7,
-      "code": 7,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
+      "code": "Contract-07",
+      "dateStart": "2023-07-22",
+      "dateEnd": "2023-08-22",
       "depositMoney": 500000,
       "totalMoney": 1000000
     },
     {
       "id": 8,
-      "code": 8,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
+      "code": "Contract-08",
+      "dateStart": "2023-07-22",
+      "dateEnd": "2023-08-22",
       "depositMoney": 500000,
       "totalMoney": 1000000
     },
     {
       "id": 9,
-      "code": 9,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
+      "code": "Contract-09",
+      "dateStart": "2023-09-22",
+      "dateEnd": "2023-10-22",
       "depositMoney": 500000,
-      "totalMoney": 1000000
-    },
-    {
-      "id": 10,
-      "code": 10,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
-      "depositMoney": 500000,
-      "totalMoney": 1000000
-    },
-    {
-      "id": 11,
-      "code": 11,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
-      "depositMoney": 500000,
-      "totalMoney": 1000000
-    },
-    {
-      "id": 12,
-      "code": 12,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
-      "depositMoney": 500000,
-      "totalMoney": 1000000
-    },
-    {
-      "id": 13,
-      "code": 13,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
-      "depositMoney": 500000,
-      "totalMoney": 1000000
-    },
-    {
-      "id": 14,
-      "code": 14,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
-      "depositMoney": 500000,
-      "totalMoney": 1000000
-    },
-    {
-      "id": 15,
-      "code": 15,
-      "dateStart": "23/05/2023",
-      "dateEnd": "30/05/2023",
-      "depositMoney": 500000,
-      "totalMoney": 1000000
+      "totalMoney": "100000"
     }
   ],
   "Customers": [
@@ -138,7 +82,7 @@
     },
     {
       "id": 2,
-      "name": "Nguyễn Đức Trung",
+      "name": "Nguyễn Hoàng Phát",
       "dob": "2001-06-05",
       "gender": "Nam",
       "identity": "049098000697",
@@ -151,7 +95,7 @@
       "location": "Việt Nam"
     },
     {
-      "name": "Nguyễn Đức Trung",
+      "name": "Phan Việt",
       "dob": "2001-06-05",
       "gender": "Nam",
       "identity": "049098000697",
@@ -165,7 +109,7 @@
       "id": 5
     },
     {
-      "name": "Nguyen Duc Trungrrrr",
+      "name": "Trần Thịnh",
       "dob": "2023-10-10",
       "gender": "false",
       "identity": "123123123",
@@ -179,7 +123,7 @@
       "id": 12
     },
     {
-      "name": "Hfueo No OIif",
+      "name": "Hoàng Văn Phát",
       "dob": "2023-10-03",
       "gender": "true",
       "identity": "555555555",

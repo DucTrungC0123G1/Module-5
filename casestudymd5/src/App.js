@@ -11,17 +11,22 @@ import {ToastContainer} from "react-toastify";
 import CustomerCreate from "./components/customers/CustomerCreate";
 import {CustomerEdit} from "./components/customers/CustomerEdit";
 import {ContractList} from "./components/contract/ContractList";
+import {ContractCreate} from "./components/contract/ContractCreate";
+import ContractEdit from "./components/contract/ContractEdit";
 
 function App() {
   return (
       <>
           <Header></Header>
           <Routes>
-              <Route path="/" element={<Facility></Facility>}/>
-              <Route path="/customers" element={<CustomerList></CustomerList>}></Route>
-              <Route path="customers/create" element={<CustomerCreate></CustomerCreate>}/>
-              <Route path="/customers/edit/:id" element={<CustomerEdit></CustomerEdit>}/>
+              <Route path="/" element={<Facility/>}/>
+              <Route path="/customers" element={<CustomerList/>}/>
+              <Route path="customers/create" element={<CustomerCreate/>}/>
+              <Route path="/customers/edit/:id" element={<CustomerEdit/>}/>
               <Route path="/contracts" element={<ContractList/>}/>
+              <Route path="/contracts/create" element={<ContractCreate/>}/>
+              <Route path="/contracts/edit/:id" element={<ContractEdit/>}/>
+
           </Routes>
           <ToastContainer/>
           <Footer></Footer>

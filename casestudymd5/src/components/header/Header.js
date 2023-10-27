@@ -97,7 +97,7 @@ const Header = () => (
                         <Link to={"/customers"}><a className="nav-item nav-link">
                             Customer
                         </a></Link>
-                        <Link to={"/"}><a className="nav-item nav-link">
+                        <Link to={"/contracts"}><a className="nav-item nav-link">
                             Contract
                         </a></Link>
                         <div className="nav-item dropdown">

@@ -12,6 +12,8 @@ export function CustomerEdit() {
     const navigate = useNavigate();
     const [customerType, setCustomerType] = useState([]);
     const [customer, setCustomer] = useState(null)
+
+
     const loadCustomerType = async () => {
         const rs = await getCustomerType();
         setCustomerType(rs);
